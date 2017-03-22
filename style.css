@@ -1,0 +1,19 @@
+#container {
+    border: 2px black solid;
+    background-color: beige;
+}
+
+img {
+    padding-top: 50px;
+    height: 100px;
+}
+
+.jump {
+    animation: jump 2s 3;
+}
+
+@keyframes jump {
+    0%   { top:0px;}
+    25%  { top:-100px;}
+    100% { top:0px;}
+}
