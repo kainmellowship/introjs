@@ -1,19 +1,103 @@
-#container {
-    border: 2px black solid;
-    background-color: beige;
+    #container {
+    border: 1px solid black;
 }
 
-img {
-    padding-top: 50px;
-    height: 100px;
+.move {
+    animation: move 3s linear infinite;
 }
 
-.jump {
-    animation: jump 2s 3;
+@keyframes move {
+    0% {
+        transform: translate(-50vw);
+    }
+    100% {
+        transform: translate(110vw);
+    }
 }
 
-@keyframes jump {
-    0%   { top:0px;}
-    25%  { top:-100px;}
-    100% { top:0px;}
+.move30 {
+    animation: move30 3s ease-out forwards;
+}
+
+@keyframes move30 {
+    0% {
+        transform: translate(-30vw);
+    }
+    100% {
+        transform: translate(30vw);
+    }
+}
+
+.movefrom30 {
+    animation: movefrom30 2s forwards 1;
+    transition-timing-function: cubic-bezier(.36, .97, .5, .93);
+}
+
+@keyframes movefrom30 {
+    from {
+        transform: translate(30vw)
+    }
+    to {
+        transform: translate(98vw)
+    }
+}
+
+    .jumponce {
+        animation: jumponce 1.5s ease 1;
+    }
+    @keyframes jumponce {
+        50% {
+            transform: translate(0px,-100px);
+        }
+        100% {
+            transform: translate(0px);
+        }
+    }
+
+.jumping {
+        animation: jumping 1.5s ease infinite;
+    }
+    @keyframes jumping {
+        50% {
+            transform: translate(0px,-100px);
+        }
+        100% {
+            transform: translate(0px);
+        }
+    }
+
+.fade {
+    opacity: 1;
+    animation: fade 2s linear infinite;
+}
+
+
+@keyframes fade {
+  0%,100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+.glow {
+    opacity: 1;
+    animation: glow 2s linear infinite;
+    background-color: yellow;
+}
+
+
+@keyframes glow {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+.falldown {
+    animation: falldown 1s ease-out 1 forwards;
+}
+
+
+@keyframes falldown {
+    from{ transform-origin:right;}
+    to {
+        transform: translate(400px) rotate(90deg);
+
+    }
 }
